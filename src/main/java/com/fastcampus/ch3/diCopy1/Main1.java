@@ -1,12 +1,9 @@
 package com.fastcampus.ch3.diCopy1;
 
+import com.fastcampus.ch3.diCopy1.clazz.Car;
+
 import java.io.FileReader;
 import java.util.Properties;
-
-class Car {}
-class SportsCar extends Car {}
-class Truck extends Car {}
-class Engine {}
 
 /**
  * 변경에 유리한 코드를 작성해보자
