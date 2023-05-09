@@ -38,5 +38,20 @@ public class AppContext {
         }
     }
 
+    /**
+     * 이름 객체 이름으로 Bean 찾기
+     */
     Object getBean(String key){return map.get(key);}
+
+    /**
+     * 객체 타입으로 Bean 찾기
+     */
+    Object getBean(Class clazz){
+        for(Object obj : map.values()){
+            if(clazz.isInstance(obj)){
+                return obj;
+            }
+        }
+        return null;
+    }
 }
