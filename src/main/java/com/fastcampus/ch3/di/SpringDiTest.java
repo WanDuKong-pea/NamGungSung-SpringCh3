@@ -24,3 +24,4 @@ public class SpringDiTest {
         System.out.println("door = " + door);
     }
 }
+

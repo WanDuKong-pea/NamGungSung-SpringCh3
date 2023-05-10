@@ -8,18 +8,24 @@ import java.util.Arrays;
 
 @Component
 public class Car {
-    @Autowired Engine engine;
-    @Autowired Door door;
+    //@Autowired
+    Engine engine;
+    //@Autowired
+    Door door;
 
     //@Value()는 @Component 빈 자동 등록 시
     //iv 값을 초기화 해줄 수 있는 애노테이션
-    @Value("red") String color;
-    @Value("100") int oil;
+    //@Value("red")
+    String color;
+    //@Value("100")
+    int oil;
 
     public Car() {
     }
-    //config.xml의 빈 설정에서 constructor-arg 태그로 초기화시 사용
-    public Car(Engine engine, Door door, String color, int oil) {
+
+    //생성자가 하나일 경우에 @Autowired 생략 가능
+    @Autowired //생성자 주입 방법
+    public Car(Engine engine, Door door, @Value("red") String color, @Value("100") int oil) {
         this.engine = engine;
         this.door = door;
         this.color = color;
