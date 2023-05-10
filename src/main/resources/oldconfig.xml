@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--scope 생략 시 기본 scope는 싱글톤, prototype은 getBean() 할때마다 매번 새로운 객체를 생성함-->
+<bean id="car" class="com.fastcampus.ch3.clazz.Truck">
+    <!--constructor를 이용한 iv 초기화 방법. 기본적으로 property 사용-->
+    <constructor-arg name="color" value="red"/>
+    <!--oil은 int 타입이지만, value="" 쌍따옴표로 정수를 묶어 기입해야함-->
+    <constructor-arg name="oil" value="100"/>
+    <!--아래는 참조이기 때문에 value가 아닌 ref 사용-->
+    <constructor-arg name="engine" ref="engine"/>
+    <constructor-arg name="door" ref="door"/>
+
+    <!-- setter 메서드를 사용한 iv 설정 방법
+        <property name="color" value="red"/>
+        <property name="oil" value="100"/>
+        <property name="engine" ref="engine"/>
+        <property name="door" ref="door"/>
+    -->
+</bean>
+<bean id="engine" class="com.fastcampus.ch3.clazz.Engine"/>
+<bean id="door" class="com.fastcampus.ch3.clazz.Door" scope="prototype"/>
+</beans>

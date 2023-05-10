@@ -1,7 +1,7 @@
 package com.fastcampus.ch3.diCopy1;
 
-import com.fastcampus.ch3.diCopy1.clazz.Car;
-import com.fastcampus.ch3.diCopy1.clazz.Engine;
+import com.fastcampus.ch3.clazz.Car;
+import com.fastcampus.ch3.clazz.Engine;
 
 public class Main2 {
     public static void main(String[] args) throws Exception{

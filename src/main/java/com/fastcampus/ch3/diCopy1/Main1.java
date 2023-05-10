@@ -1,6 +1,6 @@
 package com.fastcampus.ch3.diCopy1;
 
-import com.fastcampus.ch3.diCopy1.clazz.Car;
+import com.fastcampus.ch3.clazz.Car;
 
 import java.io.FileReader;
 import java.util.Properties;
